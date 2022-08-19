@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-zinc-800 text-zinc-300;
+    &:before {
+      content: "";
+      background-image: url("assets/bg.webp");
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  }
+}
