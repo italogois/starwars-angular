@@ -1,11 +1,14 @@
-<div *ngIf="allCategories$ | async as categories">
-  <div class="grid text-center mt-44 gap-10 lg:grid-cols-3">
+<div
+  class="flex justify-center items-center flex-wrap h-2/3 px-8"
+  *ngIf="allCategories$ | async as categories"
+>
+  <div class="grid text-center gap-10 lg:grid-cols-3 lg:gap-36">
     <div *ngFor="let category of categories | keyvalue">
       <a
         [routerLink]="'/' + category.key"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
-        class="link"
+        class="link font-bold text-2xl transition-all ease-in lg:text-3xl hover:ease-out"
       >
         {{ category.key | titlecase }}
       </a>

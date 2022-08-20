@@ -1,7 +1,4 @@
-@tailwind utilities;
-
 .link {
-  @apply text-2xl transition-all ease-in hover:ease-out;
   &:hover {
     text-shadow: 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa;
   }
