@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing'
 
-import { StarwarsService } from './starwars.service';
+import { StarwarsService } from './starwars.service'
 
 describe('StarwarsService', () => {
-  let service: StarwarsService;
+  let service: StarwarsService
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(StarwarsService);
-  });
+    TestBed.configureTestingModule({})
+    service = TestBed.inject(StarwarsService)
+  })
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+    expect(service).toBeTruthy()
+  })
+})

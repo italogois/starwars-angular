@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://swapi.dev/api/',
-};
+  baseUrl: 'https://swapi.dev/api/'
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
