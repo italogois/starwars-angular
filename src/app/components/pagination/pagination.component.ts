@@ -1,0 +1,30 @@
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Paginate } from 'src/app/interfaces/paginate';
+import { StarwarsService } from 'src/app/service/starwars.service';
+
+@Component({
+  selector: 'app-pagination',
+  templateUrl: './pagination.component.html',
+  styleUrls: ['./pagination.component.scss'],
+})
+export class PaginationComponent {
+  @Input() previousPage: string | null;
+  @Input() nextPage: string | null;
+  @Output() paginationData = new EventEmitter<Paginate>();
+
+  constructor(private starwarsService: StarwarsService) {}
+
+  paginate(pageUrl: string | null): void {
+    if (!pageUrl) return;
+
+    this.starwarsService
+      .paginate(pageUrl)
+      .subscribe(({ next, previous, results }) => {
+        this.paginationData.emit({
+          previous: previous,
+          next: next,
+          results: results,
+        });
+      });
+  }
+}

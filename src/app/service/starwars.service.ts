@@ -12,4 +12,12 @@ export class StarwarsService {
   getAllCategories() {
     return this.http.get<Categories>(environment.baseUrl);
   }
+
+  getPeoples() {
+    return this.http.get<any>(`${environment.baseUrl}/people`);
+  }
+
+  paginate(pageUrl: string) {
+    return this.http.get<any>(pageUrl);
+  }
 }

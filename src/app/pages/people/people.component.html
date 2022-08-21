@@ -1,1 +1,9 @@
-<p>people works!</p>
+<div class="grid text-center gap-10 lg:grid-cols-3 lg:gap-36">
+  <div *ngFor="let people of allPeoples$">{{ people.name }}</div>
+</div>
+
+<app-pagination
+  [previousPage]="previousPage"
+  [nextPage]="nextPage"
+  (paginationData)="updateDataVariables($event)"
+></app-pagination>
