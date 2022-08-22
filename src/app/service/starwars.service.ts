@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
+import { Observable } from 'rxjs'
 import { environment } from 'src/environments/environment'
 import { Categories } from '../interfaces/categories'
+import { People } from '../interfaces/people'
 
 @Injectable({
   providedIn: 'root'
@@ -9,15 +11,15 @@ import { Categories } from '../interfaces/categories'
 export class StarwarsService {
   constructor(private readonly http: HttpClient) {}
 
-  getAllCategories(): any {
+  getAllCategories(): Observable<Categories> {
     return this.http.get<Categories>(environment.baseUrl)
   }
 
-  getPeoples(): any {
-    return this.http.get<any>(`${environment.baseUrl}/people`)
+  getPeoples(): Observable<People> {
+    return this.http.get<People>(`${environment.baseUrl}/people`)
   }
 
-  paginate(pageUrl: string): any {
-    return this.http.get<any>(pageUrl)
+  paginate(pageUrl: string): Observable<People> {
+    return this.http.get<People>(pageUrl)
   }
 }

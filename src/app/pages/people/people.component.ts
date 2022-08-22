@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { Paginate } from 'src/app/interfaces/paginate'
 import { StarwarsService } from 'src/app/service/starwars.service'
+import { PeopleResults } from './../../interfaces/people'
 
 @Component({
   selector: 'app-people',
@@ -8,7 +9,7 @@ import { StarwarsService } from 'src/app/service/starwars.service'
   styleUrls: ['./people.component.scss']
 })
 export class PeopleComponent implements OnInit {
-  allPeoples$: any
+  allPeoples$: PeopleResults[]
   nextPage: string | null
   previousPage: string | null
 
