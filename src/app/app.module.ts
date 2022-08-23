@@ -8,6 +8,7 @@ import { FilmsComponent } from './pages/films/films.component'
 import { HomeComponent } from './pages/home/home.component'
 import { PeopleDetailsComponent } from './pages/people/people-details/people-details.component'
 import { PeopleComponent } from './pages/people/people.component'
+import { PlanetsDetailsComponent } from './pages/planets/planets-details/planets-details.component'
 import { PlanetsComponent } from './pages/planets/planets.component'
 import { SpeciesComponent } from './pages/species/species.component'
 import { StarshipsComponent } from './pages/starships/starships.component'
@@ -21,6 +22,7 @@ import { StarwarsService } from './service/starwars.service'
     FilmsComponent,
     PeopleComponent,
     PlanetsComponent,
+    PlanetsDetailsComponent,
     SpeciesComponent,
     StarshipsComponent,
     VehiclesComponent,

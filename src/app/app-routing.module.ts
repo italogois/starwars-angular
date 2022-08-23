@@ -4,6 +4,7 @@ import { FilmsComponent } from './pages/films/films.component'
 import { HomeComponent } from './pages/home/home.component'
 import { PeopleDetailsComponent } from './pages/people/people-details/people-details.component'
 import { PeopleComponent } from './pages/people/people.component'
+import { PlanetsDetailsComponent } from './pages/planets/planets-details/planets-details.component'
 import { PlanetsComponent } from './pages/planets/planets.component'
 import { SpeciesComponent } from './pages/species/species.component'
 import { StarshipsComponent } from './pages/starships/starships.component'
@@ -22,7 +23,16 @@ const routes: Routes = [
       { path: '', component: PeopleComponent, pathMatch: 'full' }
     ]
   },
-  { path: 'planets', component: PlanetsComponent },
+  {
+    path: 'planets',
+    children: [
+      {
+        path: ':id',
+        component: PlanetsDetailsComponent
+      },
+      { path: '', component: PlanetsComponent, pathMatch: 'full' }
+    ]
+  },
   { path: 'species', component: SpeciesComponent },
   { path: 'starships', component: StarshipsComponent },
   { path: 'vehicle', component: VehiclesComponent },
