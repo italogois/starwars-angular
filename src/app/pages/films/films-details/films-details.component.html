@@ -1,0 +1,24 @@
+<div class="container px-8 pt-11 mx-auto">
+  <h1 class="text-center text-5xl font-bold mt-4 mb-20">{{ film.title }}</h1>
+
+  <div
+    class="max-w-sm text-center mx-auto mb-16 lg:max-w-4xl"
+    [innerHTML]="film.opening_crawl"
+  ></div>
+
+  <ul>
+    <li class="detail-item"><span>Director</span> {{ film.director }}</li>
+    <li class="detail-item"><span>Producer</span> {{ film.producer }}</li>
+    <li class="detail-item">
+      <span>Release Date</span> {{ film.release_date }}
+    </li>
+  </ul>
+
+  <a
+    title="See all films"
+    class="block w-fit border-2 rounded-md px-8 py-3 mt-20 mx-auto transition-all cursor-pointer hover:bg-white hover:text-zinc-800 hover:no-underline"
+    routerLink="/films"
+  >
+    See all films
+  </a>
+</div>

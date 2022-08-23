@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { PaginationComponent } from './components/pagination/pagination.component'
+import { FilmsDetailsComponent } from './pages/films/films-details/films-details.component'
 import { FilmsComponent } from './pages/films/films.component'
 import { HomeComponent } from './pages/home/home.component'
 import { PeopleDetailsComponent } from './pages/people/people-details/people-details.component'
@@ -20,6 +21,7 @@ import { StarwarsService } from './service/starwars.service'
     AppComponent,
     HomeComponent,
     FilmsComponent,
+    FilmsDetailsComponent,
     PeopleComponent,
     PlanetsComponent,
     PlanetsDetailsComponent,

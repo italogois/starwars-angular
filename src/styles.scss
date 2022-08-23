@@ -32,4 +32,8 @@
       text-shadow: 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa;
     }
   }
+
+  .detail-item {
+    @apply grid grid-cols-1  gap-5 justify-center max-w-2xl mx-auto text-center p-4 even:bg-opacity-50 even:bg-zinc-700 lg:grid-cols-2;
+  }
 }

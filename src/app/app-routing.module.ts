@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { FilmsDetailsComponent } from './pages/films/films-details/films-details.component'
 import { FilmsComponent } from './pages/films/films.component'
 import { HomeComponent } from './pages/home/home.component'
 import { PeopleDetailsComponent } from './pages/people/people-details/people-details.component'
@@ -12,7 +13,16 @@ import { VehiclesComponent } from './pages/vehicles/vehicles.component'
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'films', component: FilmsComponent },
+  {
+    path: 'films',
+    children: [
+      {
+        path: ':id',
+        component: FilmsDetailsComponent
+      },
+      { path: '', component: FilmsComponent, pathMatch: 'full' }
+    ]
+  },
   {
     path: 'people',
     children: [
