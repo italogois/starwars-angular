@@ -24,4 +24,12 @@
       z-index: -1;
     }
   }
+
+  a {
+    @apply cursor-pointer transition-all ease-in hover:ease-out;
+    &:hover {
+      text-decoration: underline;
+      text-shadow: 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa;
+    }
+  }
 }

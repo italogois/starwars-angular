@@ -6,9 +6,8 @@
     <div *ngFor="let category of categories | keyvalue">
       <a
         [routerLink]="'/' + category.key"
-        routerLinkActive="active"
         ariaCurrentWhenActive="page"
-        class="link font-bold text-2xl transition-all ease-in lg:text-3xl hover:ease-out"
+        class="font-bold text-2xl transition-all ease-in lg:text-3xl hover:ease-out"
       >
         {{ category.key | titlecase }}
       </a>

@@ -23,15 +23,12 @@ export class PeopleComponent implements OnInit {
     this.starwarsService
       .getPeoples()
       .subscribe(({ next, previous, results }: Paginate): void => {
-        console.log(results)
         this.updateDataVariables({ previous, next, results })
       })
   }
 
   updateDataVariables(updateData: Paginate): void {
     const { previous, next, results } = updateData
-
-    console.log(updateData)
 
     this.nextPage = next
     this.previousPage = previous

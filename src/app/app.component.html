@@ -1,7 +1,25 @@
 <div class="h-full bg-site-bg bg-cover">
   <div class="container px-8 pt-11 mx-auto">
-    <img class="w-48 lg:w-80 m-auto" src="../assets/logo.png" alt="" />
+    <a routerLink="/">
+      <img
+        class="w-48 lg:w-80 m-auto"
+        src="../assets/logo.png"
+        alt="Logo of star wars"
+      />
+    </a>
   </div>
 
   <router-outlet></router-outlet>
+
+  <footer class="text-center p-8 mt-16">
+    <div>
+      this project use
+      <a
+        target="_blank"
+        href="https://swapi.dev/"
+        title="SWAPI - The star wars api"
+        >SWAPI - The star wars api</a
+      >
+    </div>
+  </footer>
 </div>
