@@ -8,12 +8,14 @@ import { People, PeopleResults } from '../interfaces/people'
 import { Planets, PlanetsResults } from '../interfaces/planets'
 import { Species, SpeciesResults } from '../interfaces/species'
 import { Starships, StarshipsResults } from '../interfaces/starships'
+import { Vehicles, VehiclesResults } from '../interfaces/vehicles'
 
 const peopleUrl = `${environment.baseUrl}/people`
 const planetsUrl = `${environment.baseUrl}/planets`
 const filmsUrl = `${environment.baseUrl}/films`
 const speciesUrl = `${environment.baseUrl}/species`
 const starshipsUrl = `${environment.baseUrl}/starships`
+const vehiclesUrl = `${environment.baseUrl}/vehicles`
 
 @Injectable({
   providedIn: 'root'
@@ -63,6 +65,14 @@ export class StarwarsService {
 
   getStarshipsDetails(id: number): Observable<StarshipsResults> {
     return this.http.get<StarshipsResults>(`${starshipsUrl}/${id}`)
+  }
+
+  getVehicles(): Observable<Vehicles> {
+    return this.http.get<Vehicles>(vehiclesUrl)
+  }
+
+  getVehiclesDetails(id: number): Observable<VehiclesResults> {
+    return this.http.get<VehiclesResults>(`${vehiclesUrl}/${id}`)
   }
 
   paginate(pageUrl: string): Observable<People> {

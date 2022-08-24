@@ -15,6 +15,7 @@ import { SpeciesDetailsComponent } from './pages/species/species-details/species
 import { SpeciesComponent } from './pages/species/species.component'
 import { StarshipsDetailsComponent } from './pages/starships/starships-details/starships-details.component'
 import { StarshipsComponent } from './pages/starships/starships.component'
+import { VehiclesDetailsComponent } from './pages/vehicles/vehicles-details/vehicles-details.component'
 import { VehiclesComponent } from './pages/vehicles/vehicles.component'
 import { StarwarsService } from './service/starwars.service'
 
@@ -32,6 +33,7 @@ import { StarwarsService } from './service/starwars.service'
     StarshipsComponent,
     StarshipsDetailsComponent,
     VehiclesComponent,
+    VehiclesDetailsComponent,
     PaginationComponent,
     PeopleDetailsComponent
   ],

@@ -1,0 +1,40 @@
+<div class="container px-8 pt-11 mx-auto">
+  <h1 class="text-center text-5xl font-bold mt-4 mb-20">
+    {{ vehicles.name }}
+  </h1>
+
+  <ul>
+    <li class="detail-item"><span>Model</span> {{ vehicles.model }}</li>
+    <li class="detail-item">
+      <span>Manufacturer</span> {{ vehicles.manufacturer }}
+    </li>
+    <li class="detail-item">
+      <span>Cost in Credits</span> {{ vehicles.cost_in_credits }}
+    </li>
+    <li class="detail-item"><span>Length</span> {{ vehicles.length }}</li>
+    <li class="detail-item">
+      <span>Max Atmosphering Speed</span> {{ vehicles.max_atmosphering_speed }}
+    </li>
+    <li class="detail-item"><span>Crew</span> {{ vehicles.crew }}</li>
+    <li class="detail-item">
+      <span>Passengers</span> {{ vehicles.passengers }}
+    </li>
+    <li class="detail-item">
+      <span>Cargo Capacity</span> {{ vehicles.cargo_capacity }}
+    </li>
+    <li class="detail-item">
+      <span>Consumables</span> {{ vehicles.consumables }}
+    </li>
+    <li class="detail-item">
+      <span>Starship Class</span> {{ vehicles.vehicle_class }}
+    </li>
+  </ul>
+
+  <a
+    title="See all vehicles"
+    class="block w-fit border-2 rounded-md px-8 py-3 mt-20 mx-auto transition-all cursor-pointer hover:bg-white hover:text-zinc-800 hover:no-underline"
+    routerLink="/vehicles"
+  >
+    See all vehicles
+  </a>
+</div>

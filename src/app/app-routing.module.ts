@@ -11,6 +11,7 @@ import { SpeciesDetailsComponent } from './pages/species/species-details/species
 import { SpeciesComponent } from './pages/species/species.component'
 import { StarshipsDetailsComponent } from './pages/starships/starships-details/starships-details.component'
 import { StarshipsComponent } from './pages/starships/starships.component'
+import { VehiclesDetailsComponent } from './pages/vehicles/vehicles-details/vehicles-details.component'
 import { VehiclesComponent } from './pages/vehicles/vehicles.component'
 
 const routes: Routes = [
@@ -65,7 +66,16 @@ const routes: Routes = [
       { path: '', component: StarshipsComponent, pathMatch: 'full' }
     ]
   },
-  { path: 'vehicle', component: VehiclesComponent },
+  {
+    path: 'vehicles',
+    children: [
+      {
+        path: ':id',
+        component: VehiclesDetailsComponent
+      },
+      { path: '', component: VehiclesComponent, pathMatch: 'full' }
+    ]
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
 
