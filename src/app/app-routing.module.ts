@@ -7,6 +7,7 @@ import { PeopleDetailsComponent } from './pages/people/people-details/people-det
 import { PeopleComponent } from './pages/people/people.component'
 import { PlanetsDetailsComponent } from './pages/planets/planets-details/planets-details.component'
 import { PlanetsComponent } from './pages/planets/planets.component'
+import { SpeciesDetailsComponent } from './pages/species/species-details/species-details.component'
 import { SpeciesComponent } from './pages/species/species.component'
 import { StarshipsComponent } from './pages/starships/starships.component'
 import { VehiclesComponent } from './pages/vehicles/vehicles.component'
@@ -43,7 +44,16 @@ const routes: Routes = [
       { path: '', component: PlanetsComponent, pathMatch: 'full' }
     ]
   },
-  { path: 'species', component: SpeciesComponent },
+  {
+    path: 'species',
+    children: [
+      {
+        path: ':id',
+        component: SpeciesDetailsComponent
+      },
+      { path: '', component: SpeciesComponent, pathMatch: 'full' }
+    ]
+  },
   { path: 'starships', component: StarshipsComponent },
   { path: 'vehicle', component: VehiclesComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }

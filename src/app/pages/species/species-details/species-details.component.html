@@ -1,0 +1,36 @@
+<div class="container px-8 pt-11 mx-auto">
+  <h1 class="text-center text-5xl font-bold mt-4 mb-20">{{ species.name }}</h1>
+
+  <ul>
+    <li class="detail-item">
+      <span>Classification</span> {{ species.classification }}
+    </li>
+    <li class="detail-item">
+      <span>Designation</span> {{ species.designation }}
+    </li>
+    <li class="detail-item">
+      <span>Average Height</span> {{ species.average_height }}
+    </li>
+    <li class="detail-item">
+      <span>Skin Colors</span> {{ species.skin_colors }}
+    </li>
+    <li class="detail-item">
+      <span>Hair Colors</span> {{ species.hair_colors }}
+    </li>
+    <li class="detail-item">
+      <span>Eye Colors</span> {{ species.eye_colors }}
+    </li>
+    <li class="detail-item">
+      <span>Average Lifepspan</span> {{ species.average_lifespan }}
+    </li>
+    <li class="detail-item"><span>Language</span> {{ species.language }}</li>
+  </ul>
+
+  <a
+    title="See all species"
+    class="block w-fit border-2 rounded-md px-8 py-3 mt-20 mx-auto transition-all cursor-pointer hover:bg-white hover:text-zinc-800 hover:no-underline"
+    routerLink="/species"
+  >
+    See all species
+  </a>
+</div>
