@@ -1,4 +1,5 @@
 export interface PeopleResults {
+  id?: number
   name: string
   height: string
   mass: string

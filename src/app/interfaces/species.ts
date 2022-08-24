@@ -1,4 +1,5 @@
 export interface SpeciesResults {
+  id?: number
   name: string
   classification: string
   designation: string

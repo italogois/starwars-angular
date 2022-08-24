@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { transformUrlToId } from 'src/app/helpers/transformUrlToId'
 import { Paginate } from 'src/app/interfaces/paginate'
 import { VehiclesResults } from 'src/app/interfaces/vehicles'
 import { StarwarsService } from 'src/app/service/starwars.service'
@@ -33,5 +34,9 @@ export class VehiclesComponent implements OnInit {
     this.nextPage = next
     this.previousPage = previous
     this.allVehicles$ = results
+  }
+
+  getId(url: string): number {
+    return transformUrlToId(url)
   }
 }

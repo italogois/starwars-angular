@@ -6,7 +6,7 @@
       <a
         class="text-xl underline font-semibold"
         *ngFor="let specie of allSpecies$; let i = index"
-        routerLink="{{ i + 1 }}"
+        routerLink="{{ getId(specie.url) }}"
       >
         {{ specie.name }}
       </a>

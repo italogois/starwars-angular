@@ -1,4 +1,5 @@
 export interface StarshipsResults {
+  id?: number
   name: string
   model: string
   manufacturer: string

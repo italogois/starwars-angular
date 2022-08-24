@@ -6,7 +6,7 @@
       <a
         class="text-xl underline font-semibold"
         *ngFor="let planet of allPlanets$; let i = index"
-        routerLink="{{ i + 1 }}"
+        routerLink="{{ getId(planet.url) }}"
       >
         {{ planet.name }}
       </a>

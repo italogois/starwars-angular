@@ -1,4 +1,5 @@
 export interface PlanetsResults {
+  id?: number
   name: string
   rotation_period: string
   orbital_period: string

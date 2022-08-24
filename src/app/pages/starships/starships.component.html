@@ -6,7 +6,7 @@
       <a
         class="text-xl underline font-semibold"
         *ngFor="let starships of allStarships$; let i = index"
-        routerLink="{{ i + 1 }}"
+        routerLink="{{ getId(starships.url) }}"
       >
         {{ starships.name }}
       </a>

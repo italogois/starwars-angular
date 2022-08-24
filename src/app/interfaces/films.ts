@@ -1,4 +1,5 @@
 export interface FilmsResults {
+  id?: number
   title: string
   episode_id: number
   opening_crawl: string
