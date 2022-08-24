@@ -7,11 +7,13 @@ import { Films, FilmsResults } from '../interfaces/films'
 import { People, PeopleResults } from '../interfaces/people'
 import { Planets, PlanetsResults } from '../interfaces/planets'
 import { Species, SpeciesResults } from '../interfaces/species'
+import { Starships, StarshipsResults } from '../interfaces/starships'
 
 const peopleUrl = `${environment.baseUrl}/people`
 const planetsUrl = `${environment.baseUrl}/planets`
 const filmsUrl = `${environment.baseUrl}/films`
 const speciesUrl = `${environment.baseUrl}/species`
+const starshipsUrl = `${environment.baseUrl}/starships`
 
 @Injectable({
   providedIn: 'root'
@@ -53,6 +55,14 @@ export class StarwarsService {
 
   getSpeciesDetails(id: number): Observable<SpeciesResults> {
     return this.http.get<SpeciesResults>(`${speciesUrl}/${id}`)
+  }
+
+  getStarships(): Observable<Starships> {
+    return this.http.get<Starships>(starshipsUrl)
+  }
+
+  getStarshipsDetails(id: number): Observable<StarshipsResults> {
+    return this.http.get<StarshipsResults>(`${starshipsUrl}/${id}`)
   }
 
   paginate(pageUrl: string): Observable<People> {

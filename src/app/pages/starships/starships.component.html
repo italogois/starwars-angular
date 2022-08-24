@@ -1,1 +1,21 @@
-<p>starships works!</p>
+<div class="container px-8 pt-11 mx-auto">
+  <h1 class="text-center text-5xl font-bold mt-4 mb-20">Starships</h1>
+
+  <div class="flex flex-col gap-10 justify-center items-center">
+    <div class="grid text-center gap-10 lg:grid-cols-3 lg:gap-36">
+      <a
+        class="text-xl underline font-semibold"
+        *ngFor="let starships of allStarships$; let i = index"
+        routerLink="{{ i + 1 }}"
+      >
+        {{ starships.name }}
+      </a>
+    </div>
+  </div>
+
+  <app-pagination
+    [previousPage]="previousPage"
+    [nextPage]="nextPage"
+    (paginationData)="updateDataVariables($event)"
+  ></app-pagination>
+</div>

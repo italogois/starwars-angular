@@ -1,0 +1,44 @@
+<div class="container px-8 pt-11 mx-auto">
+  <h1 class="text-center text-5xl font-bold mt-4 mb-20">
+    {{ starships.name }}
+  </h1>
+
+  <ul>
+    <li class="detail-item"><span>Model</span> {{ starships.model }}</li>
+    <li class="detail-item">
+      <span>Manufacturer</span> {{ starships.manufacturer }}
+    </li>
+    <li class="detail-item">
+      <span>Cost in Credits</span> {{ starships.cost_in_credits }}
+    </li>
+    <li class="detail-item"><span>Length</span> {{ starships.length }}</li>
+    <li class="detail-item">
+      <span>Max Atmosphering Speed</span> {{ starships.max_atmosphering_speed }}
+    </li>
+    <li class="detail-item"><span>Crew</span> {{ starships.crew }}</li>
+    <li class="detail-item">
+      <span>Passengers</span> {{ starships.passengers }}
+    </li>
+    <li class="detail-item">
+      <span>Cargo Capacity</span> {{ starships.cargo_capacity }}
+    </li>
+    <li class="detail-item">
+      <span>Consumables</span> {{ starships.consumables }}
+    </li>
+    <li class="detail-item">
+      <span>Hyperdrive Rating</span> {{ starships.hyperdrive_rating }}
+    </li>
+    <li class="detail-item"><span>MGLT</span> {{ starships.MGLT }}</li>
+    <li class="detail-item">
+      <span>Starship Class</span> {{ starships.starship_class }}
+    </li>
+  </ul>
+
+  <a
+    title="See all starships"
+    class="block w-fit border-2 rounded-md px-8 py-3 mt-20 mx-auto transition-all cursor-pointer hover:bg-white hover:text-zinc-800 hover:no-underline"
+    routerLink="/starships"
+  >
+    See all starships
+  </a>
+</div>

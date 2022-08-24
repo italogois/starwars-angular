@@ -13,6 +13,7 @@ import { PlanetsDetailsComponent } from './pages/planets/planets-details/planets
 import { PlanetsComponent } from './pages/planets/planets.component'
 import { SpeciesDetailsComponent } from './pages/species/species-details/species-details.component'
 import { SpeciesComponent } from './pages/species/species.component'
+import { StarshipsDetailsComponent } from './pages/starships/starships-details/starships-details.component'
 import { StarshipsComponent } from './pages/starships/starships.component'
 import { VehiclesComponent } from './pages/vehicles/vehicles.component'
 import { StarwarsService } from './service/starwars.service'
@@ -29,6 +30,7 @@ import { StarwarsService } from './service/starwars.service'
     SpeciesComponent,
     SpeciesDetailsComponent,
     StarshipsComponent,
+    StarshipsDetailsComponent,
     VehiclesComponent,
     PaginationComponent,
     PeopleDetailsComponent
