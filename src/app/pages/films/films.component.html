@@ -1,4 +1,4 @@
-<div class="container px-8 pt-11 mx-auto">
+<div *ngIf="allFilms$; else loading" class="container px-8 pt-11 mx-auto">
   <h1 class="text-center text-5xl font-bold mt-4 mb-20">Films</h1>
 
   <div class="flex flex-col gap-10 justify-center items-center">
@@ -6,7 +6,7 @@
       <a
         class="text-xl underline font-semibold"
         *ngFor="let film of allFilms$; let i = index"
-        routerLink="{{ i + 1 }}"
+        routerLink="{{ getId(film.url) }}"
       >
         {{ film.title }}
       </a>
@@ -19,3 +19,7 @@
     (paginationData)="updateDataVariables($event)"
   ></app-pagination>
 </div>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

@@ -1,4 +1,4 @@
-<div class="container px-8 pt-11 mx-auto">
+<div *ngIf="people; else loading" class="container px-8 pt-11 mx-auto">
   <h1 class="text-center text-5xl font-bold mt-4 mb-20">{{ people.name }}</h1>
 
   <ul>
@@ -19,3 +19,7 @@
     See all peoples
   </a>
 </div>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

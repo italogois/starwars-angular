@@ -1,6 +1,6 @@
 <div
   class="flex justify-center items-center flex-wrap h-2/3 px-8"
-  *ngIf="allCategories$ | async as categories"
+  *ngIf="allCategories$ | async as categories; else loading"
 >
   <div class="grid text-center gap-10 lg:grid-cols-3 lg:gap-36">
     <div *ngFor="let category of categories | keyvalue">
@@ -14,3 +14,7 @@
     </div>
   </div>
 </div>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

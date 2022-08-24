@@ -1,4 +1,4 @@
-<div class="container px-8 pt-11 mx-auto">
+<div *ngIf="starships; else loading" class="container px-8 pt-11 mx-auto">
   <h1 class="text-center text-5xl font-bold mt-4 mb-20">
     {{ starships.name }}
   </h1>
@@ -42,3 +42,7 @@
     See all starships
   </a>
 </div>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>
