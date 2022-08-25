@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { take } from 'rxjs'
 import { LoadingService } from 'src/app/service/loading.service'
 
 @Component({
@@ -11,6 +12,8 @@ export class LoadingComponent implements OnInit {
   loading: boolean
 
   ngOnInit(): void {
-    this.loadingService.loading.subscribe((res) => (this.loading = res))
+    this.loadingService.loading
+      .pipe(take(1))
+      .subscribe((res) => (this.loading = res))
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { take } from 'rxjs'
 import { transformUrlToId } from 'src/app/helpers/transformUrlToId'
 import { FilmsResults } from 'src/app/interfaces/films'
 import { Paginate } from 'src/app/interfaces/paginate'
@@ -23,6 +24,7 @@ export class FilmsComponent implements OnInit {
   initialData(): void {
     this.starwarsService
       .getFilms()
+      .pipe(take(1))
       .subscribe(({ next, previous, results }: Paginate): void => {
         this.updateDataVariables({ previous, next, results })
       })

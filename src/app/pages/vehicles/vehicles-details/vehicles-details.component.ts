@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
+import { take } from 'rxjs'
 import { VehiclesResults } from 'src/app/interfaces/vehicles'
 import { StarwarsService } from 'src/app/service/starwars.service'
 
@@ -24,6 +25,7 @@ export class VehiclesDetailsComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'))
     this.starwarsService
       .getVehiclesDetails(id)
+      .pipe(take(1))
       .subscribe((res) => (this.vehicles = res))
   }
 }

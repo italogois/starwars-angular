@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { take } from 'rxjs'
 import { Paginate } from 'src/app/interfaces/paginate'
 import { StarwarsService } from 'src/app/service/starwars.service'
 
@@ -19,6 +20,7 @@ export class PaginationComponent {
 
     this.starwarsService
       .paginate(pageUrl)
+      .pipe(take(1))
       .subscribe(({ next, previous, results }: Paginate) => {
         this.paginationData.emit({
           previous,
